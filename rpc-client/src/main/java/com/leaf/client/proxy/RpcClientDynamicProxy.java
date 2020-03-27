@@ -50,13 +50,13 @@ public class RpcClientDynamicProxy<T> implements InvocationHandler {
         log.info("请求内容: {}", rpcRequest);
 
         //治理可以用 ZK 服务发现获取注册地址
-//        String address = discover.discover();
-//        String[] arrays = address.split(":");
-//        if(ArrayUtils.isEmpty(arrays)){
-//            throw new RuntimeException("服务发现失败！");
-//        }
-//        String host = arrays[0];
-//        int port = Integer.parseInt(arrays[1]);
+        String address = discover.discover();
+        String[] arrays = address.split(":");
+        if(ArrayUtils.isEmpty(arrays)){
+            throw new RuntimeException("服务发现失败！");
+        }
+        String host = arrays[0];
+        int port = Integer.parseInt(arrays[1]);
 
         NettyClient nettyClient = new NettyClient("127.0.0.1", 8888);
         log.info("开始连接服务端：{}", new Date());

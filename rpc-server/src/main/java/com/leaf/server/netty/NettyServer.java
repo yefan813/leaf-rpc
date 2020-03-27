@@ -66,7 +66,7 @@ public class NettyServer implements InitializingBean {
                 });
         bind(serverBootstrap,8888);
         log.info("=============将服务 ip 和端口注册到 注册中心==============");
-//        registry.registry("127.0.0.1:8888");
+        registry.registry("127.0.0.1:8888");
     }
 
     public void bind(ServerBootstrap serverBootstrap,int port) {
