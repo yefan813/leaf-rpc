@@ -20,7 +20,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <springboot.version>2.2.2.RELEASE</springboot.version>
+        <springboot.version>2.5.12</springboot.version>
         <project.version>1.0-SNAPSHOT</project.version>
     </properties>
 
